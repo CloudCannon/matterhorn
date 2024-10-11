@@ -9,6 +9,8 @@
 
 ## Unreleased
 
+* Automated release setup
+
 ## v0.1.0 (October 11, 2024)
 
 * Initial release
