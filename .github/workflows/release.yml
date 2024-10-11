@@ -145,13 +145,7 @@ jobs:
           key: ${{ runner.os }}-${{ matrix.rust }}-min165
 
       - name: Install Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: ${{ matrix.rust }}
-          target: ${{ matrix.target }}
-          override: true
-          default: true
-          components: rustfmt, clippy
+        uses: actions-rust-lang/setup-rust-toolchain@v1
 
       - name: Test Lib
         run: cargo test
