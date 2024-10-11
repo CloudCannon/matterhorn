@@ -49,7 +49,10 @@ pub fn parse_document<'d>(
         document_start + separator.len()
     };
 
-    for (pre_fm_end, _) in original_content.match_indices(separator).skip(1) {
+    for (pre_fm_end, _) in original_content
+        .match_indices(separator)
+        .filter(|(i, _)| *i > fm_start)
+    {
         let post_fm_end = pre_fm_end + separator.len();
         let potential_front_matter = if should_parse_separator {
             &original_content[fm_start..post_fm_end]
