@@ -1,6 +1,6 @@
 [package]
 name = "matterhorn"
-version = "0.1.0"
+version = "0.0.0"
 edition = "2021"
 description = "A lenient front matter parsing crate that supports files prefixed with YAML, JSON, and TOML front matter."
 license = "MIT"
