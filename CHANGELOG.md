@@ -9,6 +9,8 @@
 
 ## Unreleased
 
+## v0.1.2 (October 11, 2024)
+
 * Fix parsing of flat JSON front matter objects
 
 ## v0.1.1 (October 11, 2024)
