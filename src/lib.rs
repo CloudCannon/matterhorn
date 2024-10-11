@@ -17,6 +17,8 @@ pub struct MatterhornDocument<'d> {
     pub content: &'d str,
 }
 
+/// Parse a full document into a front matter object and text content,
+/// with auto-detection for the front matter type.
 pub fn parse_document<'d>(
     original_content: &'d str,
 ) -> Result<MatterhornDocument<'d>, MatterhornError> {
@@ -92,14 +94,20 @@ pub fn parse_document<'d>(
     })
 }
 
+/// Parse JSON.
+/// NB: Maintains source order.
 pub fn parse_json(content: &str) -> Result<serde_json::Value, String> {
     serde_json::from_str(content).map_err(|err| err.to_string())
 }
 
+/// Parse TOML.
 pub fn parse_toml(content: &str) -> Result<serde_json::Value, String> {
     toml::from_str(content).map_err(|err| err.to_string())
 }
 
+/// Parse YAML.
+/// NB: Maintains source order.
+/// NB: Allows duplicate keys.
 pub fn parse_yaml(content: &str) -> Result<serde_json::Value, String> {
     let mut yaml = saphyr::YamlLoader::load_from_str(content).map_err(|err| err.to_string())?;
     yaml.retain(|val| !val.is_null());
