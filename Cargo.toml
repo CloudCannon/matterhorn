@@ -1,0 +1,13 @@
+[package]
+name = "matterhorn"
+version = "0.1.0"
+edition = "2021"
+description = "A lenient front matter parsing crate that supports files prefixed with YAML, JSON, and TOML front matter."
+license = "MIT"
+repository = "https://github.com/cloudcannon/matterhorn"
+
+[dependencies]
+serde_json = { version = "1", features = ['preserve_order'] }
+toml = { version = "0.8.14", features = ["parse"] }
+thiserror = "1.0"
+saphyr = "0.0.1"
