@@ -10,4 +10,4 @@ repository = "https://github.com/cloudcannon/matterhorn"
 serde_json = { version = "1", features = ['preserve_order'] }
 toml = { version = "0.8.14", features = ["parse"] }
 thiserror = "1.0"
-saphyr = "0.0.1"
+saphyr = { git = "https://github.com/saphyr-rs/saphyr", rev = "3cade858fa1c585085be4e7883d291f361418556" }

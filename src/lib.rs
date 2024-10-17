@@ -112,7 +112,7 @@ pub fn parse_toml(content: &str) -> Result<serde_json::Value, String> {
 /// NB: Maintains source order.
 /// NB: Allows duplicate keys.
 pub fn parse_yaml(content: &str) -> Result<serde_json::Value, String> {
-    let mut yaml = saphyr::YamlLoader::load_from_str(content).map_err(|err| err.to_string())?;
+    let mut yaml = saphyr::Yaml::load_from_str(content).map_err(|err| err.to_string())?;
     yaml.retain(|val| !val.is_null());
 
     if yaml.len() != 1 {
