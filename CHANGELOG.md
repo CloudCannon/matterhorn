@@ -9,6 +9,8 @@
 
 ## Unreleased
 
+* Updated to the latest revision of saphyr
+
 ## v0.1.2 (October 11, 2024)
 
 * Fix parsing of flat JSON front matter objects
