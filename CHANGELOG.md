@@ -9,6 +9,8 @@
 
 ## Unreleased
 
+## v0.1.4 (November 27, 2024)
+
 * Updated to the latest revision of saphyr, making YAML parsing lenient
 
 ## v0.1.2 (October 11, 2024)
