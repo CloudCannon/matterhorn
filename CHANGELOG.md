@@ -9,6 +9,8 @@
 
 ## Unreleased
 
+## v0.1.5 (May 6, 2025)
+
 * Update saphyr to 0.0.4
 * Update toml to 0.8.x
 * Update thiserror to 2.x
