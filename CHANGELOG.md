@@ -9,6 +9,10 @@
 
 ## Unreleased
 
+* Update saphyr to 0.0.4
+* Update toml to 0.8.x
+* Update thiserror to 2.x
+
 ## v0.1.4 (November 27, 2024)
 
 * Updated to the latest revision of saphyr, making YAML parsing lenient

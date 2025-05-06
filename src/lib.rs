@@ -1,6 +1,7 @@
 use std::ops::Add;
 
 use conversion::yaml_to_json;
+use saphyr::LoadableYamlNode;
 use thiserror::Error;
 
 mod conversion;
@@ -311,6 +312,23 @@ title: Number five
             parsed,
             Ok(MatterhornDocument {
                 front_matter: json!({ "title": "Number five" }),
+                content: ""
+            })
+        );
+    }
+
+    #[test]
+    fn unquoted_ellipsis_fm() {
+        let input = r#"
+---
+comment: hello ... world
+---"#;
+        let parsed = parse_document(input);
+
+        assert_eq!(
+            parsed,
+            Ok(MatterhornDocument {
+                front_matter: json!({ "comment": "hello ... world" }),
                 content: ""
             })
         );
