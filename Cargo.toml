@@ -10,4 +10,4 @@ repository = "https://github.com/cloudcannon/matterhorn"
 serde_json = { version = "1", features = ['preserve_order'] }
 toml = { version = "0.8", features = ["parse"] }
 thiserror = "2"
-saphyr = "0.0.4"
+saphyr = "0.0.6"
