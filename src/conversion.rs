@@ -29,5 +29,6 @@ pub fn yaml_to_json(yaml: Yaml) -> Result<serde_json::Value, String> {
         Yaml::Representation(x, _, _) => Err(format!(
             "Encountered unexpected representation when converting YAML: {x:?}"
         )),
+        Yaml::Tagged(_, yaml) => yaml_to_json(*yaml),
     }
 }
