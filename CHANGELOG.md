@@ -9,6 +9,8 @@
 
 ## Unreleased
 
+## v0.1.6 (March 13, 2026)
+
 * Update toml to 1.x
 
 ## v0.1.5 (May 6, 2025)
