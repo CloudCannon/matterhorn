@@ -9,6 +9,8 @@
 
 ## Unreleased
 
+* Update toml to 1.x
+
 ## v0.1.5 (May 6, 2025)
 
 * Update saphyr to 0.0.4
